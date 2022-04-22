@@ -1,0 +1,20 @@
+main {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+
+  .highlighted-text {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    a {
+      text-decoration: none;
+      color: royalblue;
+      transition: all 0.8s;
+
+      &:hover {
+        color: deeppink;
+      }
+    }
+  }
+}
