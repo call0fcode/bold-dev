@@ -18,7 +18,7 @@ $primaryColor: #111e6c;
 $secondaryColor: #ef434e;
 
 // Fonts
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap");
 
 $mainFont: "Montserrat", sans-serif;
 
@@ -31,3 +31,7 @@ $headerHeightDesktop: $headerHeightMobile + 60px;
 
 // Wrappers
 $containerMaxWidth: $screen-full;
+
+// Borders
+$cardBorderRadius: 20px;
+$cardTitleBorderRadius: 20px;

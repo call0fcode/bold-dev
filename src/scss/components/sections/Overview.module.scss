@@ -1,0 +1,15 @@
+.overview {
+  display: grid;
+  row-gap: 15px;
+  width: 100%;
+
+  @include mdMinBreakPoint {
+    column-gap: 40px;
+    grid-template-columns: 5fr 8fr;
+  }
+}
+
+.filters {
+  border: 2px solid indigo;
+  height: 100px;
+}
