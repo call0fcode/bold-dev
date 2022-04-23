@@ -1,0 +1,17 @@
+.main-header {
+  @include headerHeight;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to right, $primaryColor 0%, $secondaryColor 170%);
+  position: sticky;
+  top: 0;
+  padding: 0 15px;
+
+  @include mdMinBreakPoint {
+    padding: 0 30px;
+  }
+
+  @include lgMinBreakPoint {
+    padding: 0 50px;
+  }
+}

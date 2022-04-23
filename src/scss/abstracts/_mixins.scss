@@ -40,3 +40,22 @@
     @content;
   }
 }
+
+// Wrappers
+@mixin container {
+  margin: 0 auto;
+  max-width: $containerMaxWidth;
+}
+
+// Heights
+@mixin headerHeight {
+  height: $headerHeightMobile;
+
+  @include mdMinBreakPoint {
+    height: $headerHeightTablet;
+  }
+
+  @include lgMinBreakPoint {
+    height: $headerHeightDesktop;
+  }
+}

@@ -9,6 +9,7 @@ $screen-full: 1400px;
 // Colors
 $textColor: #323232;
 $textLightColor: #969696;
+$textLightestColor: #ffffff;
 
 $backgroundColor: #e5e7ef;
 
@@ -20,3 +21,13 @@ $secondaryColor: #ef434e;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
 
 $mainFont: "Montserrat", sans-serif;
+
+// Others
+
+// Heights
+$headerHeightMobile: 80px;
+$headerHeightTablet: $headerHeightMobile + 30px;
+$headerHeightDesktop: $headerHeightMobile + 40px;
+
+// Wrappers
+$containerMaxWidth: $screen-full;
