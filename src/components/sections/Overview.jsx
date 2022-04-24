@@ -1,8 +1,10 @@
+// Components
+import SummaryCard from "../ui/SummaryCard";
+import DateSelectorBar from "../ui/DateSelectorBar";
+import FilterButton from "../ui/buttons/FilterButton";
+
 // Styles
 import classes from "../../scss/components/sections/Overview.module.scss";
-import FilterButton from "../ui/buttons/FilterButton";
-import DateSelectorBar from "../ui/DateSelectorBar";
-import SummaryCard from "../ui/SummaryCard";
 
 const Overview = () => {
   return (
@@ -11,7 +13,7 @@ const Overview = () => {
       <div className={classes.filters}>
         <DateSelectorBar />
         <div className={classes["filter-container"]}>
-          <FilterButton />
+          <FilterButton title="Filtrar" />
         </div>
       </div>
     </section>
