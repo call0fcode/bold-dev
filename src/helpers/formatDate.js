@@ -1,3 +1,5 @@
+import capitalize from "./capitalizer";
+
 function padTo2Digits(num) {
   return num.toString().padStart(2, "0");
 }
@@ -26,6 +28,13 @@ function formatDate(date) {
       padTo2Digits(date.getMinutes()),
       padTo2Digits(date.getSeconds()),
     ].join(":"),
+    monthAndYear:
+      capitalize(date.toLocaleString("default", { month: "long" })) +
+      " " +
+      date.getFullYear(),
+    monthLongFormat: capitalize(
+      date.toLocaleString("default", { month: "long" })
+    ),
   };
 }
 

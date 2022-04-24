@@ -9,7 +9,7 @@ import classes from "../../scss/components/sections/Overview.module.scss";
 const Overview = () => {
   return (
     <section className={classes.overview}>
-      <SummaryCard totalAmount={"1’560.000"} />
+      <SummaryCard />
       <div className={classes.filters}>
         <DateSelectorBar />
         <div className={classes["filter-container"]}>

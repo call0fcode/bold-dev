@@ -3,6 +3,10 @@ import Header from "./components/layout/Header";
 import Overview from "./components/sections/Overview";
 import Transactions from "./components/sections/Transactions";
 
+// Context Providers
+import DatesProvider from "./context/DatesContext";
+import AmountsProvider from "./context/AmountsContext";
+
 // Styles
 import "./scss/components/App.module.scss";
 
@@ -13,10 +17,14 @@ function App() {
   return (
     <>
       <Header />
-      <main>
-        <Overview />
-        <Transactions transactions={transactions} />
-      </main>
+      <DatesProvider>
+        <AmountsProvider>
+          <main>
+            <Overview />
+            <Transactions transactions={transactions} />
+          </main>
+        </AmountsProvider>
+      </DatesProvider>
     </>
   );
 }

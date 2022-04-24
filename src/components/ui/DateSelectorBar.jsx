@@ -1,24 +1,38 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+
+// Contexts
+import { DatesContext } from "../../context/DatesContext";
+import { AmountsContext } from "../../context/AmountsContext";
 
 // Styles
 import classes from "../../scss/components/ui/DateSelectorBar.module.scss";
 
-// Get current month in long format (abril, diciembre, septiembre, etc)
-const currentMonth = new Date().toLocaleString("default", { month: "long" });
+// Helpers
+import formatDate from "../../helpers/formatDate";
 
-// Two hardcoded items and the last one generated dynamically and capitalized.
-const barItems = [
-  "Hoy",
-  "Esta semana",
-  currentMonth.charAt(0).toUpperCase() + currentMonth.slice(1),
-];
+const barItems = ["Hoy", "Esta semana", formatDate(new Date()).monthLongFormat];
 
 const DateSelectorBar = () => {
+  const { setSelectedDate } = useContext(DatesContext);
+  const { setTotalAmount } = useContext(AmountsContext);
+
   const [barItem, setBarItem] = useState(0);
 
   const selectDate = (e) => {
     const barItemIndex = +e.target.getAttribute("data-bar-item");
     setBarItem(barItemIndex);
+    if (barItemIndex == 0) {
+      setTotalAmount("2’345.600");
+      setSelectedDate("hoy");
+    }
+    if (barItemIndex == 1) {
+      setTotalAmount("5’725.420");
+      setSelectedDate("semana");
+    }
+    if (barItemIndex == 2) {
+      setTotalAmount("16’372.900");
+      setSelectedDate("mes");
+    }
   };
 
   return (
