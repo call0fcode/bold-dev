@@ -9,10 +9,10 @@ import BoldLogo from "../../assets/bold-logo.svg";
 import classes from "../../scss/components/layout/Header.module.scss";
 
 const menuItems = [
-  { tag: "Mi negocio", url: "#", icon: null },
+  { tag: "Mi negocio", url: "https://github.com/call0fcode", icon: null },
   {
     tag: "Ayuda",
-    url: "#",
+    url: "https://ayuda.bold.co/",
     icon: <HelpIcon />,
   },
 ];

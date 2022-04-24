@@ -24,7 +24,7 @@ const Navbar = ({ logo, menuItems }) => {
       <ul className={`${classes.menu} ${isActive}`}>
         {menuItems.map((item) => (
           <li key={item.tag} className={classes["menu-item"]}>
-            <a href={item.url}>
+            <a href={item.url} target="_blank" rel="noreferrer">
               <span className={item.icon && classes["link-with-icon"]}>
                 {item.tag}
               </span>
