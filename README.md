@@ -5,6 +5,8 @@
 
 This is [bold.co](https://www.bold.co/)'s technical test project to access a position as a web developer in the company.
 
+You can test the app [here](https://c0c-bold-web-developer-test.netlify.app/).
+
 
 ## Which development features / tools has been used?
 
