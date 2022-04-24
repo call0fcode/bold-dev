@@ -39,10 +39,6 @@
   justify-content: space-between;
   padding: 40px 20px;
 
-  @include lgMinBreakPoint {
-    padding: 55px 20px;
-  }
-
   p {
     margin: 0;
     color: $primaryColor;
