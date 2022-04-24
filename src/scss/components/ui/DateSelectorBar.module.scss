@@ -4,11 +4,20 @@
   list-style: none;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   background-color: $textLightestColor;
   color: $primaryColor;
   font-weight: 500;
-  font-size: 20px;
-  border-radius: 5px;
+  font-size: 14px;
+  border-radius: 10px;
+
+  @include mdMinBreakPoint {
+    font-size: 18px;
+  }
+
+  @include lgMinBreakPoint {
+    font-size: 20px;
+  }
 }
 
 .bar-item {

@@ -10,6 +10,12 @@
 }
 
 .filters {
-  border: 2px solid indigo;
-  height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .filter-container {
+    display: flex;
+    justify-content: end;
+  }
 }

@@ -1,0 +1,37 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  background-color: $textLightestColor;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: rgba($primaryColor, 0.6);
+  line-height: 1;
+  width: 100%;
+  transition: all 0.3s;
+
+  &:hover,
+  &:focus {
+    color: $primaryColor;
+    box-shadow: 0 2px 20px 0 rgb(11 18 65 / 16%);
+  }
+
+  @include mdMinBreakPoint {
+    flex-basis: 33.33%;
+    font-size: 18px;
+  }
+
+  @include lgMinBreakPoint {
+    font-size: 20px;
+  }
+
+  svg {
+    width: 25px;
+    height: auto;
+  }
+}
