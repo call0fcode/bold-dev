@@ -1,10 +1,13 @@
 // Components
 import Header from "./components/layout/Header";
 import Overview from "./components/sections/Overview";
-import Table from "./components/sections/Table";
+import Transactions from "./components/sections/Transactions";
 
 // Styles
 import "./scss/components/App.module.scss";
+
+// Data
+import transactions from "./data/transactions.js";
 
 function App() {
   return (
@@ -12,7 +15,7 @@ function App() {
       <Header />
       <main>
         <Overview />
-        <Table />
+        <Transactions transactions={transactions} />
       </main>
     </>
   );

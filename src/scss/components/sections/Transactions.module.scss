@@ -1,0 +1,50 @@
+.transactions-container {
+  position: relative;
+  background-color: $textLightestColor;
+  border-radius: $cardBorderRadius;
+  max-height: 500px;
+  z-index: 0;
+  overflow: auto;
+
+  /* Hide scrollbar for IE, Edge & Firefox but keep scroll functionality */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  /* Hide scrollbar for Chrome, Safari & Opera but keep scroll functionality */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.title {
+  border-radius: $cardTitleBorderRadius;
+  background: linear-gradient(82deg, $primaryColor 0%, $secondaryColor 200%);
+  padding: 15px 30px;
+  color: $textLightestColor;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  @include lgMinBreakPoint {
+    font-size: 25px;
+    text-align: left;
+  }
+}
+
+// .overlay {
+//   background: linear-gradient(
+//     to top,
+//     $textLightestColor 0%,
+//     rgba($textLightestColor, 0.4) 200%
+//   );
+//   width: 100%;
+//   position: absolute;
+//   height: 100px;
+//   border-radius: 0 0 20px 20px;
+//   bottom: 0;
+//   left: 0;
+//   backdrop-filter: blur(3px);
+// }

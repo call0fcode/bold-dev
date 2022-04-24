@@ -22,6 +22,8 @@
   font-size: 20px;
   animation-name: zoomInAnimation;
   animation-duration: 0.3s;
+  z-index: 1;
+  box-shadow: 0 2px 20px 0 rgb(11 18 65 / 16%);
 }
 
 .header {

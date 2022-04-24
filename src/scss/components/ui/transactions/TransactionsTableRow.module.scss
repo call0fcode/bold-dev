@@ -1,0 +1,74 @@
+.row {
+  &.fail td {
+    background-color: aqua !important;
+  }
+
+  td {
+    padding: 30px 10px;
+    vertical-align: top;
+    border-bottom: 1px solid rgba($textLightColor, 0.5);
+    font-size: 20px;
+
+    p {
+      margin: 0;
+    }
+
+    &:first-of-type {
+      padding-left: 30px;
+    }
+
+    &.type {
+      color: $primaryColor;
+
+      p {
+        display: inline;
+      }
+
+      svg {
+        transform: scale(1.5);
+        margin-right: 15px;
+      }
+    }
+
+    &.date,
+    &.id,
+    &.method {
+      color: $textLightColor;
+    }
+
+    &.method {
+      p {
+        display: inline;
+        vertical-align: top;
+      }
+      svg {
+        margin-right: 15px;
+      }
+    }
+
+    &.amount {
+      .paid {
+        font-size: 22px;
+        color: $primaryColor;
+        font-weight: 500;
+      }
+
+      .taxes-text {
+        color: $textLightColor;
+        font-size: 18px;
+      }
+
+      .taxes {
+        color: $secondaryColor;
+      }
+
+      p {
+        margin-bottom: 10px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
