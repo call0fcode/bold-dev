@@ -1,9 +1,18 @@
 // Components
 import CloseIcon from "../icons/CloseIcon";
+
 // Styles
 import classes from "../../scss/components/ui/Popup.module.scss";
 
 const Popup = ({ title, togglePopup, options }) => {
+  const setFilterSettings = (e) => {
+    console.log(`Setting filter options to: ${e.target.name} `);
+  };
+
+  const runFilter = () => {
+    togglePopup();
+  };
+
   return (
     <div className={`${classes.popup}`}>
       <header className={classes.header}>
@@ -12,14 +21,23 @@ const Popup = ({ title, togglePopup, options }) => {
       </header>
       <div className={classes.content}>
         <form className={classes.form}>
-          {options.map((option, index) => (
-            <div key={index} className={classes["input-group"]}>
-              <input type="checkbox" name={option.id} id={option.id} />
-              <label htmlFor={option.id}>{option.label}</label>
-            </div>
-          ))}
+          {options.map((option, index) => {
+            return (
+              <div key={index} className={classes["input-group"]}>
+                <input
+                  type="checkbox"
+                  name={option.id}
+                  id={option.id}
+                  onChange={setFilterSettings}
+                />
+                <label htmlFor={option.id}>{option.label}</label>
+              </div>
+            );
+          })}
         </form>
-        <button className={classes.button}>Aplicar</button>
+        <button className={classes.button} onClick={runFilter}>
+          Aplicar
+        </button>
       </div>
     </div>
   );
