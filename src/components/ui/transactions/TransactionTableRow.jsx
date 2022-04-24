@@ -17,12 +17,12 @@ const TransactionTableRow = ({
   const typeIcon = type === "pos" ? <POSIcon /> : <LinkIcon />;
   const cardIcon = method.card === "visa" ? <VisaIcon /> : <MasterCardIcon />;
   const statusText = status === 1 ? "Cobro exitoso" : "Cobro no realizado";
-  const statusBadge = status === 1 ? "success" : "fail";
-  const formatedDate = formatDate(date);
+  const statusBadge = status === 1 ? classes.success : classes.fail;
+  const formatedDate = formatDate(date).fullDate;
   const formatedCardNumber = formatCardNumber(method.cardNumber);
 
   return (
-    <tr className={`${classes.row} ${statusBadge}}`}>
+    <tr className={`${classes.row} ${statusBadge}`}>
       <td className={classes.type}>
         {typeIcon}
         <p>{statusText}</p>
