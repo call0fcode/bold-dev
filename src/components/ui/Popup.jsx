@@ -3,13 +3,7 @@ import CloseIcon from "../icons/CloseIcon";
 // Styles
 import classes from "../../scss/components/ui/Popup.module.scss";
 
-const options = [
-  { id: "terminal", label: "Cobro con datáfono" },
-  { id: "link", label: "Cobros con link de pago" },
-  { id: "all", label: "Ver todos" },
-];
-
-const Popup = ({ title, togglePopup }) => {
+const Popup = ({ title, togglePopup, options }) => {
   return (
     <div className={`${classes.popup}`}>
       <header className={classes.header}>
